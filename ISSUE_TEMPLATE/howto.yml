@@ -1,0 +1,46 @@
+name: How do I...?
+description: Ask for help if you're stuck
+title: "[Howto]: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying out e2b Sandbox!        
+        
+        First, [check out our Frequently Asked Questions](https://github.com/Zack4DEV/e2bSandbox/wiki/Frequently-Asked-Questions)
+There's a high chance your question has already been answered there.
+
+        You can also check our [open issues](https://github.com/Zack4DEV/e2bSandbox/issues/) and see if what you're asking about was already discussed there.
+
+  - type: dropdown
+    id: client
+    attributes:
+      label: Version
+      description: Which version of e2b Sandbox are you using?
+      options:
+        - Command-line (Python) version
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: Which operating system are you using?
+      options:
+        - Windows 10
+        - Windows 11
+        - MacOS
+        - Ubuntu Linux
+        - Linux (other)
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Please describe your question in as much detail as possible.
+      placeholder: "How can I do [something] with e2b Sandbox? I've checked the FAQ, video tutorials, open issues and Discord and there doesn't seem to be an answer to this."
+    validations:
+      required: true

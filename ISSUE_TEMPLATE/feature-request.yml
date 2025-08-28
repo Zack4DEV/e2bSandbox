@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest a feature or improvement
+title: "[Enhancement]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to suggest improvement to e2b Sandbox
+        
+        If you haven't already, please check our [Frequently Asked Questions](https://github.com/Zack4DEV/e2bSandbox/wiki/Frequently-Asked-Questions) and [currently open issues](https://github.com/Zack4DEV/e2bSandbox/issues/) to see if this is a commonly-asked feature. If so, please comment on the existing issue instead of creating a new one.
+        
+  - type: dropdown
+    id: client
+    attributes:
+      label: Version
+      description: Which version of e2b-code-interpretert does this apply?
+      options:
+        - Command-line (Python) version
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Suggestion
+      description: Please describe your suggestion for the improvement or new feature here.
+      placeholder: "It would be cool if e2b Sandbox could do [something]."
+    validations:
+      required: true
