@@ -118,9 +118,11 @@ jsonref = "^1.1.0"
 
 [tool.poetry.group.dev.dependencies]
 python-dotenv = "^1.0.1"
+e2b="^2.0.0"
 e2b-code-interpreter = "^1.5.2"
 e2b-desktop = "^0.1.0"
 cowsay = "^6.1"
+python-cowsay="^1.2.1"
 pytest = "^8.4.1"
 pytest-cov = "^6.2.1"
 pytest-asyncio = "^0.23.6"

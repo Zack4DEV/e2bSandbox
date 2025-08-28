@@ -21,6 +21,7 @@ Key Objectives:
 🛠 Built With
 
 - E2B Runtime SDK – To manage, test, and monitor sandbox lifecycles.
+- [E2B CLI](https://www.npmjs.com/package/@e2b/cli) – CLI Tool build manager your running E2B sandbox and sandbox templates ,Only NodeJs support.
 - Python – Runtime control logic.
 - Docker / VMs – For reproducible environments.
 - GitHub Actions – CI for test & deployment automation.
