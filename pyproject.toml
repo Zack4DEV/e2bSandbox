@@ -1,4 +1,8 @@
-[tool.poetry]
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
 name = "e2bSandbox"
 version = "1.0.0"
 description = "e2b Runtime Sandbox, Code Interpreting"
@@ -68,6 +72,7 @@ indent-width = 4
 target-version = "py39"
 
 [tool.ruff.lint]
+extend-select = ["I"]
 select = ["E", "F", "I", "UP", "B", "PL", "RUF"]
 ignore = ["E501", "PLR0913", "PLR2004"]
 extend-select = ["I"]
