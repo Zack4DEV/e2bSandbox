@@ -52,9 +52,7 @@ priority = "explicit"
 
 [tool.poetry.group.dev.dependencies]
 python-dotenv = "^1.0.1"
-e2b="^2.0.0"
-e2b-code-interpreter = "^1.5.2"
-e2b-desktop = "^0.1.0"
+
 cowsay = "^6.1"
 python-cowsay="^1.2.1"
 pytest = "^8.4.1"
@@ -64,6 +62,9 @@ pytest-timeout = "^2.3.1"
 ruff = "^0.3.5"
 pre-commit = "^3.7.0"
 mypy = "^1.10.0"
+e2b = "^2.8.1"
+e2b-code-interpreter = "^2.4.1"
+e2b-desktop = "^2.2.0"
 
 [tool.pytest.ini_options]
 addopts = "-ra -q --cov=core --no-cov-on-fail --timeout 10"
