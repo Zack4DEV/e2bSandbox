@@ -14,7 +14,7 @@ readme = "README.md"
 repository = "https://github.com/Zack4DEV/e2bSandbox"
 homepage = "https://e2b.dev"
 keywords = ["ai", "llm"]
-requires-python = "^3.9"
+requires-python = "^3.14"
 dependencies = [
     "pydantic>=2.8.2,<3.0.0",
     "langchain>=0.2.1,<0.3.0",
@@ -34,12 +34,14 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Software Development :: Code Generators",
     "Typing :: Typed",
 ]
 
 [tool.poetry]
 packages = [{include = "./", from = "."}]
+python = "^3.14"
 
 [[tool.poetry.source]]
 name = "PyPI"
@@ -52,9 +54,8 @@ priority = "explicit"
 
 [tool.poetry.group.dev.dependencies]
 python-dotenv = "^1.0.1"
-
 cowsay = "^6.1"
-python-cowsay="^1.2.1"
+python-cowsay = "^1.2.1"
 pytest = "^8.4.1"
 pytest-cov = "^6.2.1"
 pytest-asyncio = "^0.23.6"
@@ -84,7 +85,7 @@ ignore = ["E501", "PLR0913", "PLR2004"]
 extend-select = ["I"]
 
 [tool.mypy]
-python_version = "3.9"
+python_version = "3.14"
 ignore_missing_imports = true
 strict = true
 plugins = []
