@@ -2,7 +2,7 @@
 name = "e2bSandbox"
 version = "1.0.0"
 description = "e2b Runtime Sandbox, Code Interpreting"
-authors = "Zack4DEV ,manager@Zeh4DEV.com"
+authors = ["Zack4DEV ,manager@Zeh4DEV.com"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/Zack4DEV/e2bSandbox"
