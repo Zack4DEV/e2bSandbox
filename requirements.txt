@@ -1,5 +1,5 @@
-pdm >= "2.25.9"
-mypy >= "1.13"
+pdm=2.25.9
+mypy>=1.13
 pydantic>=2.8.2
 langchain>=0.2.1
 langchain-openai>=0.1.0
