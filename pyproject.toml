@@ -5,9 +5,9 @@ build-backend = "poetry.core.masonry.api"
 [project]
 name = "e2bSandbox"
 version = "1.0.0"
-description = "e2b Runtime Sandbox ,Code Interpreting"
+description = "e2b Runtime Sandbox, Code Interpreting"
 authors = [
-    {name = "Zack4DEV", email = "manager@Zeh4DEV.com"}
+    { name = "Zack4DEV", email = "manager@Zeh4DEV.com"}
 ]
 license = "MIT"
 readme = "README.md"
@@ -22,25 +22,24 @@ dependencies = [
     "crewai>=0.150.0,<0.151.0",
     "llama-index>=0.13.1,<0.14.0",
     "ollama>=0.1.0,<0.2.0",
-    "jsonref>=1.1.0,<2.0.0",
+    "jsonref>=1.1.0,<2.0.0"
 ]
-
 classifiers = [
-    "Development Status :: 1 - Planning",
-    "Intended Audience :: Developers",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Programming Language :: Python :: 3.14",
-    "Topic :: Software Development :: Code Generators",
-    "Typing :: Typed",
+    "Development Status:: 1 - Planning",
+    "Intended Audience:: Developers",
+    "Programming Language:: Python:: 3",
+    "Programming Language:: Python:: 3.9",
+    "Programming Language:: Python:: 3.10",
+    "Programming Language:: Python:: 3.11",
+    "Programming Language:: Python:: 3.12",
+    "Programming Language:: Python:: 3.13",
+    "Programming Language:: Python:: 3.14",
+    "Topic:: Software Development:: Code Generators",
+    "Typing:: Typed"
 ]
 
 [tool.poetry]
-packages = [{include = "./", from = "."}]
+packages = [{ include = "./", from = "."}]
 
 [[tool.poetry.source]]
 name = "PyPI"
@@ -71,7 +70,10 @@ addopts = "-ra -q --cov=core --no-cov-on-fail --timeout 10"
 pythonpath = ["."]
 
 [tool.coverage.report]
-exclude_lines = ["if TYPE_CHECKING:", "raise NotImplementedError()"]
+exclude_lines = [
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError()"
+]
 
 [tool.ruff]
 line-length = 120
