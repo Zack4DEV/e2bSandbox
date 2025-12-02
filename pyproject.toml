@@ -41,7 +41,6 @@ classifiers = [
 
 [tool.poetry]
 packages = [{include = "./", from = "."}]
-python = "^3.14"
 
 [[tool.poetry.source]]
 name = "PyPI"
