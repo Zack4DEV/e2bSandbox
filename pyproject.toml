@@ -1,54 +1,30 @@
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[project]
+[tool.poetry]
 name = "e2bSandbox"
 version = "1.0.0"
 description = "e2b Runtime Sandbox, Code Interpreting"
-authors = [
-    { name = "Zack4DEV", email = "manager@Zeh4DEV.com"}
-]
+authors = [{ name = "Zack4DEV", email = "manager@Zeh4DEV.com" }]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/Zack4DEV/e2bSandbox"
 homepage = "https://e2b.dev"
 keywords = ["ai", "llm"]
-requires-python = "^3.14"
-dependencies = [
-    "pydantic>=2.8.2,<3.0.0",
-    "langchain>=0.2.1,<0.3.0",
-    "langchain-openai>=0.1.0,<0.2.0",
-    "crewai>=0.150.0,<0.151.0",
-    "llama-index>=0.13.1,<0.14.0",
-    "ollama>=0.1.0,<0.2.0",
-    "jsonref>=1.1.0,<2.0.0"
-]
+packages = [{ include = "./", from = "." }]
 classifiers = [
-    "Development Status:: 1 - Planning",
-    "Intended Audience:: Developers",
-    "Programming Language:: Python:: 3",
-    "Programming Language:: Python:: 3.9",
-    "Programming Language:: Python:: 3.10",
-    "Programming Language:: Python:: 3.11",
-    "Programming Language:: Python:: 3.12",
-    "Programming Language:: Python:: 3.13",
-    "Programming Language:: Python:: 3.14",
-    "Topic:: Software Development:: Code Generators",
-    "Typing:: Typed"
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Code Generators",
+    "Typing :: Typed"
 ]
-
-[tool.poetry]
-packages = [{ include = "./", from = "."}]
-
-[[tool.poetry.source]]
-name = "PyPI"
-priority = "primary"
-
-[[tool.poetry.source]]
-name = "testpypi"
-url = "https://test.pypi.org/legacy/"
-priority = "explicit"
+[tool.poetry.dependencies]
+python = "^3.14"
+pydantic = ">=2.8.2,<3.0.0"
+langchain = ">=0.2.1,<0.3.0"
+langchain-openai = ">=0.1.0,<0.2.0"
+crewai = ">=0.150.0,<0.151.0"
+llama-index = ">=0.13.1,<0.14.0"
+ollama = ">=0.1.0,<0.2.0"
+jsonref = ">=1.1.0,<2.0.0"
 
 [tool.poetry.group.dev.dependencies]
 python-dotenv = "^1.0.1"
@@ -65,15 +41,25 @@ e2b = "^2.8.1"
 e2b-code-interpreter = "^2.4.1"
 e2b-desktop = "^2.2.0"
 
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "testpypi"
+url = "https://test.pypi.org/legacy/"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.pytest.ini_options]
 addopts = "-ra -q --cov=core --no-cov-on-fail --timeout 10"
 pythonpath = ["."]
 
 [tool.coverage.report]
-exclude_lines = [
-    "if TYPE_CHECKING:",
-    "raise NotImplementedError()"
-]
+exclude_lines = ["if TYPE_CHECKING:", "raise NotImplementedError()"]
 
 [tool.ruff]
 line-length = 120
@@ -92,5 +78,5 @@ strict = true
 plugins = []
 
 [[tool.mypy.overrides]]
-module = ["langchain.*", "crewai.*", "llama_index.*", "ollama.*"]
+module = ["langchain.", "crewai.", "llama_index.", "ollama."]
 ignore_missing_imports = true
