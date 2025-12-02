@@ -1,5 +1,4 @@
 [tool.poetry]
-packages = [{ include = "e2bsandbox"}]
 name = "e2bSandbox"
 version = "1.0.0"
 description = "e2b Runtime Sandbox, Code Interpreting"
@@ -8,6 +7,7 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/Zack4DEV/e2bSandbox"
 homepage = "https://e2b.dev"
+packages = [{ include = "./"}]
 keywords = ["ai", "llm"]]
 classifiers = [
     "Development Status :: 1 - Planning",
