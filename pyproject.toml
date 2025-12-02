@@ -17,6 +17,7 @@ classifiers = [
     "Typing :: Typed"
 ]
 [tool.poetry.dependencies]
+python = ">=3.14,<3.10"
 pydantic = ">=2.8.2,<3.0.0"
 langchain = ">=0.2.1,<0.3.0"
 langchain-openai = ">=0.1.0,<0.2.0"
