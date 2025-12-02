@@ -27,7 +27,7 @@ jobs:
       run: |
         python -m pip install poetry 
         poetry env use python3.13
-        cd ../../
+        cd ./
         poetry install
     - name: Lint with ruff
       run: poetry run ruff check --verbose --output-format github --config ./pyproject.toml ./
