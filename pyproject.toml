@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/Zack4DEV/e2bSandbox"
 homepage = "https://e2b.dev"
-packages = [{ include = "./"}]
+packages = [{ include = "e2bsandbox" }]
 keywords = ["ai", "llm"]]
 classifiers = [
     "Development Status :: 1 - Planning",
