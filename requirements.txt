@@ -1,25 +1,23 @@
-
-pdm == "2.25.9"
-mypy == "1.13"
-pydantic==2.8.2
-langchain==0.2.1
-langchain-openai==0.1.0
-crewai==0.150.0
-llama-index==0.13.1
-ollama==0.1.0
-jsonref==1.1.0
-python-dotenv==1.0.1
-e2b==2.0.0
-e2b-code-interpreter==1.5.2
-e2b-desktop==0.1.0
-e2b-cli==
-python-cowsay==1.2.1
-cowsay==6.1
-pytest==8.4.1
-ruff==0.3.5
-pytest-cov==6.2.1
-pytest-asyncio==0.23.6
-pytest-timeout==2.3.1
-pre-commit==3.7.0
+pdm=2.25.9
+mypy>=1.13
+pydantic>=2.8.2
+langchain>=0.2.1
+langchain-openai>=0.1.0
+crewai>=0.150.0
+llama-index>=0.13.1
+ollama>=0.1.0
+jsonref>=1.1.0
+python-dotenv>=1.0.1
+e2b==2.8.1
+e2b-code-interpreter==2.4.1
+e2b-desktop==2.2.0
+python-cowsay>=1.2.1
+cowsay>=6.1
+pytest>=8.4.1
+ruff>=0.3.5
+pytest-cov>=6.2.1
+pytest-asyncio>=0.23.6
+pytest-timeout>=2.3.1
+pre-commit>=3.7.0
 
 

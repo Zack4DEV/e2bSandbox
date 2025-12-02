@@ -5,55 +5,46 @@ build-backend = "poetry.core.masonry.api"
 [project]
 name = "e2bSandbox"
 version = "1.0.0"
-description = "e2b Runtime Sandbox ,Code Interpreting"
-authors = [{name = "Zack4DEV", email = "manager@Zeh4DEV.com"}]
+description = "e2b Runtime Sandbox, Code Interpreting"
+authors = ["Zack4DEV ,manager@Zeh4DEV.com"]
 license = "MIT"
 readme = "README.md"
-requires-python = ">=3.10, <3.14"
-packages = [{include = "./", from = "."}]
 repository = "https://github.com/Zack4DEV/e2bSandbox"
 homepage = "https://e2b.dev"
+packages = [{ include = "./" ,from= "." }]
+package-mode = false
 keywords = ["ai", "llm"]
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 1 - Planning",
     "Intended Audience :: Developers",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Code Generators",
-    "Typing :: Typed",
+    "Typing :: Typed"
 ]
-dependencies = [
-    "pydantic>=2.8.2",
-    "langchain>=0.2.1",
-    "langchain-openai>=0.1.0",
-    "crewai>=0.150.0",
-    "llama-index>=0.13.1",
-    "ollama>=0.1.0",
-    "jsonref>=1.1.0",
-]
+[tool.poetry.dependencies]
+python = ">=3.12.4,<3.14"
+pydantic = ">=2.8.2,<3.0.0"
+langchain = ">=0.2.1,<0.3.0"
+langchain-openai = ">=0.1.0,<0.2.0"
+crewai = ">=1.4.1,<1.6.1"
+llama-index = ">=0.13.1,<0.14.0"
+ollama = ">=0.1.0,<0.2.0"
+jsonref = ">=1.1.0,<2.0.0"
 
-[project.optional-dependencies]
-dev = [
-    "python-dotenv>=1.0.1",
-    "e2b>=2.0.0",
-    "e2b-code-interpreter>=1.5.2",
-    "e2b-desktop>=0.1.0",
-    "cowsay>=6.1",
-    "python-cowsay>=1.2.1",
-    "pytest>=8.4.1",
-    "pytest-cov>=6.2.1",
-    "pytest-asyncio>=0.23.6",
-    "pytest-timeout>=2.3.1",
-    "ruff>=0.3.5",
-    "pre-commit>=3.7.0",
-    "mypy>=1.10.0",
-]
-
-[tool.poetry]
-packages = [{include = "./", from = "."}]
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.1"
+cowsay = "^6.1"
+python-cowsay = "^1.2.1"
+pytest = "^8.4.1"
+pytest-cov = "^6.2.1"
+pytest-asyncio = "^0.23.6"
+pytest-timeout = "^2.3.1"
+ruff = "^0.3.5"
+pre-commit = "^3.7.0"
+mypy = "^1.10.0"
+e2b = "^2.8.1"
+e2b-code-interpreter = "^2.4.1"
+e2b-desktop = "^2.2.0"
 
 [[tool.poetry.source]]
 name = "PyPI"
@@ -63,6 +54,10 @@ priority = "primary"
 name = "testpypi"
 url = "https://test.pypi.org/legacy/"
 priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 addopts = "-ra -q --cov=core --no-cov-on-fail --timeout 10"
@@ -74,36 +69,20 @@ exclude_lines = ["if TYPE_CHECKING:", "raise NotImplementedError()"]
 [tool.ruff]
 line-length = 120
 indent-width = 4
-target-version = "py310"
+target-version = "py39"
 
 [tool.ruff.lint]
 extend-select = ["I"]
 select = ["E", "F", "I", "UP", "B", "PL", "RUF"]
 ignore = ["E501", "PLR0913", "PLR2004"]
+extend-select = ["I"]
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.13"
 ignore_missing_imports = true
 strict = true
 plugins = []
 
 [[tool.mypy.overrides]]
-module = ["langchain.*", "crewai.*", "llama_index.*", "ollama.*"]
+module = ["langchain.", "crewai.", "llama_index.", "ollama."]
 ignore_missing_imports = true
-
-[tool.pdm.dev-dependencies]
-pytest = "^8.4.1"
-pytest-cov = "^6.2.1"
-mypy = "^1.10.0"
-ruff = "^0.3.5"
-pre-commit = "^3.7.0"
-
-[tool.pdm.build]
-includes = ["src"]
-
-[tool.pdm.scripts]
-test = "pytest --cov=src tests/"
-post_test = "echo 'Tests completed.'"
-lint = "ruff check src/"
-typecheck = "mypy src/"
-
