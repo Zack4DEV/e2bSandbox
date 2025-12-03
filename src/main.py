@@ -11,8 +11,5 @@ def main():
     execution = sbx.run_code("print('Hello, By e2b.dev Runtime Sandbox - Code interpretation in progress...')")
     print(execution.logs)
 
-    files = sbx.files.list("agentic/")
-    print(files)
-
 if __name__ == "__main__":
     main()

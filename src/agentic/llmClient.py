@@ -1,11 +1,13 @@
 
 import os
 
+from dotenv import load_dotenv
 from e2b_code_interpreter import Sandbox
 from groq import Groq
 
 
 def get_llm_response(prompt):
+    load_dotenv()
     """
     Sends a prompt to the Groq LLM and returns the response.
     """
@@ -22,7 +24,7 @@ def get_llm_response(prompt):
 
     # Send the prompt to the model
     response = client.chat.completions.create(
-        model="llama-guard-4-12b",
+        model="meta-llama/llama-guard-4-12b",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},

@@ -7,7 +7,7 @@
   # Use https://search.nixos.org/packages to find packages
   packages = [
       pkgs.python3
-      pkgs.python311Packages.pip
+   #   pkgs.python314Packages.pip
       
 
       pkgs.sudo
